@@ -65,8 +65,10 @@ returnBtn.addEventListener("click", async (e) => {
 });
 
 const GLITCH_CHARS = "!@#$%^&*?+={}[]<>|/\\~`▦◎▣◉■□●○✦✧※†‡¤§";
+const supportsHover = window.matchMedia("(hover: hover)").matches;
 
 document.querySelectorAll(".glitch").forEach((el) => {
+    if (!supportsHover) return;
     const original = el.textContent;
     let interval = null;
 

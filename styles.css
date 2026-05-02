@@ -83,8 +83,10 @@ html, body {
     position: absolute;
     inset: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 1.5rem;
     background-color: #FFC40C;
     opacity: 1;
     transition: opacity 0.5s ease;
@@ -101,9 +103,6 @@ html, body {
 }
 
 .return-btn {
-    position: absolute;
-    top: 2rem;
-    left: 2.25rem;
     font-family: "Noto Serif JP", serif;
     font-size: 1.5rem;
     font-weight: 500;
