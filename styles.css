@@ -1,0 +1,118 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #FFC40C;
+    font-family: "Noto Serif JP", serif;
+    color: #000;
+    overflow: hidden;
+}
+
+.loader {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFC40C;
+    z-index: 10;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.loader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loader-text {
+    font-size: 6rem;
+    font-weight: 500;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+}
+
+.cursor {
+    display: inline-block;
+    width: 0.08em;
+    height: 1em;
+    background-color: #000;
+    margin-left: 0.08em;
+    animation: blink 0.9s steps(1, end) infinite;
+}
+
+@keyframes blink {
+    0%, 50%   { opacity: 1; }
+    50.01%, 100% { opacity: 0; }
+}
+
+.page {
+    position: fixed;
+    inset: 0;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.page.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.menu {
+    position: absolute;
+    top: 2rem;
+    left: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.menu-item {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.subpage {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFC40C;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.subpage.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.subpage-text {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.return-btn {
+    position: absolute;
+    top: 2rem;
+    left: 2.25rem;
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #000;
+    text-decoration: none;
+    line-height: 1.4;
+    cursor: pointer;
+}
+
+.glitch {
+    white-space: pre;
+}
