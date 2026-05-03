@@ -50,7 +50,6 @@ function showSubpage(target) {
                         </svg>
                     </a>
                 </div>
-                <a href="mailto:yosephjp.benjamin@gmail.com" class="contact-email">yosephjp.benjamin@gmail.com</a>
             </div>
         `;
     } else {
