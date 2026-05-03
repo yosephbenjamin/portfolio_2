@@ -26,20 +26,26 @@ function showHome() {
     page.classList.remove("hidden");
 }
 
-function showSubpage() {
+function showSubpage(target) {
+    const content = document.getElementById("subpage-content");
+    if (target === "résumé") {
+        content.innerHTML = '<a href="__CV_Yoseph_Benjamin__.pdf" target="_blank" rel="noopener" class="cv-link">current CV</a>';
+    } else {
+        content.textContent = "coming this month";
+    }
     menu.style.display = "none";
     subpage.classList.remove("hidden");
     page.classList.remove("hidden");
 }
 
-async function transitionTo(view) {
+async function transitionTo(view, target) {
     page.classList.add("hidden");
     await wait(500);
     await playLoader(CLICK_HOLD);
     if (view === "home") {
         showHome();
     } else {
-        showSubpage();
+        showSubpage(target);
     }
 }
 
@@ -55,7 +61,7 @@ window.addEventListener("DOMContentLoaded", async () => {
 menuItems.forEach((item) => {
     item.addEventListener("click", async (e) => {
         e.preventDefault();
-        await transitionTo("subpage");
+        await transitionTo("subpage", item.dataset.target);
     });
 });
 

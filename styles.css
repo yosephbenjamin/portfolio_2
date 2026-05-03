@@ -102,6 +102,12 @@ html, body {
     font-weight: 400;
 }
 
+.cv-link {
+    color: #000;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .return-btn {
     font-family: "Noto Serif JP", serif;
     font-size: 1.5rem;
